@@ -204,6 +204,41 @@
   #invite.shown .reveal:nth-child(5) { transition-delay: 2.1s; }
   #invite.shown .reveal:nth-child(6) { transition-delay: 2.5s; }
   #invite.shown .reveal:nth-child(7) { transition-delay: 2.9s; }
+  #invite.shown .reveal:nth-child(8) { transition-delay: 3.3s; }
+
+  /* ---------- photo medallion ---------- */
+  .medallion {
+    width: clamp(150px, 42vw, 184px);
+    height: clamp(150px, 42vw, 184px);
+    margin: 6px auto 0;
+    border-radius: 50%;
+    padding: 5px;
+    background: conic-gradient(from 210deg, var(--gold), var(--rose-deep), #f3cdd8, var(--gold));
+    box-shadow: 0 16px 38px rgba(185, 106, 128, .3);
+    position: relative;
+  }
+  .medallion::before, .medallion::after {
+    position: absolute;
+    font-size: 20px;
+    color: var(--rose-deep);
+    text-shadow: 0 2px 8px rgba(255,255,255,.8);
+  }
+  .medallion::before { content: '✿'; left: -12px; top: 18px; }
+  .medallion::after { content: '✿'; right: -12px; bottom: 18px; }
+  .medallion .inner {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 3px solid #fffdfa;
+    overflow: hidden;
+  }
+  .medallion img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 24%;
+    display: block;
+  }
 
   .eyebrow {
     font-size: 12px;
@@ -402,6 +437,12 @@
     <div class="reveal">
       <div class="eyebrow">Особое приглашение</div>
       <h1>Merry Me</h1>
+    </div>
+
+    <div class="reveal">
+      <div class="medallion">
+        <div class="inner"><img src="photo.jpg" alt="Аяулым"></div>
+      </div>
     </div>
 
     <div class="reveal to-name">Аяулым</div>
